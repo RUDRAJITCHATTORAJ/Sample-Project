@@ -12,19 +12,19 @@ public class BookingServiceImpl implements BookingService {
 	@Override
 	public boolean getTicketBook(Booking book) {
 		
-		int tcost=0;
+		int tncost=0;
 		
 		
 		try {
 		if(book.getCircle().equals("King")) {
-			tcost=150*(Integer.parseInt(book.getNoft()));
+			tncost=150*(Integer.parseInt(book.getNoft()));
 		}
 		else
 		{
-			tcost=250*(Integer.parseInt(book.getNoft()));
+			tncost=250*(Integer.parseInt(book.getNoft()));
 		}
 		
-		book.setCost(tcost);
+		book.setCost(tncost);
 		
 		return true;
 		
